@@ -4,7 +4,7 @@ function average(array){
  	for(let i=0; i < array.length; i++ ){
  		sum = sum + array[i] ;
  	}
-  ave = sum / array.length;
+  let  ave = sum / array.length;
 
   return ave;
 }
