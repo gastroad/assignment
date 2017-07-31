@@ -9,7 +9,7 @@ function adder(a, b){
       b = vo
     }
 
-for(i = a ; i<=b ; i++){
+for(let i = a ; i<=b ; i++){
    result += a
    a++
 }
