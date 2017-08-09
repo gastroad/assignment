@@ -17,7 +17,7 @@ function nlcm(nums) {
 
   for(let i = 1; i < nums.length; i++) {
       result = nums[i] = gcd(nums[(i-1)], nums[i])
-			console.log(nums[i]);
+
   }
   return result;
 }
