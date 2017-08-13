@@ -6,12 +6,12 @@ function longest_palindrom(s){
   } else {
 
     console.log(s);
-    let A = longest_palindrom(s.substring(0, s.length-1)); 
+    let A = longest_palindrom(s.substring(0, s.length-1));
     let B = longest_palindrom(s.substring(1, s.length));
 
     return Math.max(A, B);
 
-  }ls
+  }
 }
 
 
