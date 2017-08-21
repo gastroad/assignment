@@ -14,9 +14,9 @@ let initialState = [
 
 let secondState = [
 	[X,X,X,X,X],
-	[X,X,X,X,X],
-	[X,O,O,O,X],
-	[X,X,X,X,X],
+	[X,X,O,X,X],
+	[X,X,O,X,X],
+	[X,X,O,X,X],
 	[X,X,X,X,X],
 ]
 
@@ -137,28 +137,30 @@ function checkedAlive(i, j) {
 
 function calculateNextState(prevState) {
 
-        let nextState
+
 
 
 
 				for(let i=0; i < initialState.length; i++){
 					for (let j = 0; j < initialState[0].length; j++) {
-						// deadCell
+
 						if (initialState[i][j] === O) {
 							checkedDead(i, j);
-							continue;
 						}
-						// alive
 						checkedAlive(i, j)
 					}
 				}
-			console.log(deadCell);
-			console.log(aliveCell);
 
-				// killCell(deadCell);
+				for(let q = 0; q<deadCell.length; q++){
+				initialState[deadCell[q][0]][deadCell[q][1]] = 0
+				initialState[aliveCell[q][0]][aliveCell[q][1]] = 1
+				}
+
+
+
 
         // write your code
-	return
+	return initialState
 
 }
 
